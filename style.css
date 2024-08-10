@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #D1D5DB;
+}
+.container{
+  background: #111827;
+  border-radius: 20px;
+  margin-top: 20px;
+  height: 480px;
+  box-shadow: 2px 2px 2px white;
+  max-width: 293px;
+  position: relative;
+  left: 30px;
+}
+button{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #374151;
+  border: none;
+  margin-left: 10px;
+  margin: 10px;
+  margin-bottom: 10px;
+  color: white;
+  box-shadow: 2px 2px 2px white;
+  transition: 0.2s;
+}
+input{
+  width: 90%;
+  box-shadow: 2px 2px 2px white;
+  position: relative;
+  left: 15px;
+  height: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: none;
+  background: #374151;
+  text-align: end;
+  font-size: 50px;
+  color: white;
+  font-family: Times New Roman;
+}
+.equalButton{
+  background: #22D0EF;
+}
+.operatorButton{
+  background: #44403C;
+}
+.operatorButton:hover{
+}
+button:active{
+  opacity: 80%;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+button:hover{
+  opacity: 50%;
+  border-radius: 15px;
+}
+.home{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 0px;
+  margin-bottom: 10px;
+  background: #DC2626;
+  color: white;
+  border-radius: 10px;
+  transition: 0.2s;
+  border: solid 1px black;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.home:hover{
+  border-radius: 12px;
+}
+.home:active{
+  border-radius: 15px;
+}

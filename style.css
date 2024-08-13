@@ -1,33 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 :root{
-  --clr: #2DD4BF;
+  --clr: #C2A01C;
   --j: black;
+  --body:  #A1662F;
+  --container: #756730;
+  --opB: #655410;
+  --opE: #4A3D0B;
+  --opA: #88721E;
 }
 body{
-  background: gray;
+  background: var(--body);
 }
 .inputs{
   background: var(--clr);
   margin-bottom: 10px;
   padding-left: 20px;
   border-radius: 10px;
+  box-shadow: 0 15px 12px rgba(0,0,0,0.5);
 }
 .buttons{
-  background: #F472B6;
+  background: var(--clr);
   padding-top: 15px;
   padding-left: 7px;
   padding-right: 0px;
   border-radius: 10px;
+  box-shadow: 0 15px 12px rgba(0,0,0,0.5);
 }
 .main{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 90vh;
-  background: gray;
+  background: var(--body);
+  border-radius: 15px;
 }
 .container{
-  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 15px 12px rgba(0,0,0,0.5);
+  background: var(--container);
   padding: 20px;
   border: none;
   border-radius: 15px;
@@ -41,8 +50,8 @@ button{
   font-size: 20px;
   margin-bottom: 15px;
   margin-right: 10px;
-  background: yellow;
-  color: black;
+  background: var(--opA);
+  color: white;
   font-weight: bold;
   font-family: Monospae;
   letter-spacing: 0.1rem;
@@ -51,11 +60,11 @@ button{
   box-shadow: 0 15px 12px rgba(0, 0, 0, 0.5);
 }
 .operatorButton{
-  background: #22D0EF;
+  background: var(--opB);
   transition: 0.3s;
 }
 .equalButton{
-  background: lime;
+  background: var(--opE);
   font-size: 25px;
   transition: 0.5s;
   width: 135px;

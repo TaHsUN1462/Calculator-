@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+  --clr: #2DD4BF;
+  --j: black;
+}
 body{
   background: gray;
+}
+.inputs{
+  background: var(--clr);
+  margin-bottom: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+.buttons{
+  background: #F472B6;
+  padding-top: 15px;
+  padding-left: 7px;
+  padding-right: 0px;
+  border-radius: 10px;
 }
 .main{
   display: flex;
@@ -24,12 +42,13 @@ button{
   margin-bottom: 15px;
   margin-right: 10px;
   background: yellow;
-  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.5);
   color: black;
   font-weight: bold;
-  font-family: Monospace;
+  font-family: Monospae;
   letter-spacing: 0.1rem;
+  font-family: Times New Roman;
   transition: 0.3s;
+  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.5);
 }
 .operatorButton{
   background: #22D0EF;
@@ -39,7 +58,7 @@ button{
   background: lime;
   font-size: 25px;
   transition: 0.5s;
-  width: 130px;
+  width: 135px;
 }
 button:hover{
   transform: Scale(115%);
@@ -47,14 +66,20 @@ button:hover{
 }
 input{
   width: 100%;
+  background: var(--clr);
+  color: var(--j);
+  border-radius: 5px;
   pointer-events: none;
   height: 30px;
-  margin-bottom: 15px;
+  font-family: 'Josefin Sans';
+  margin-bottom: 5px;
   position: relative;
   right: 3px;
   font-size: 40px;
   border: none;
   text-align: right;
+  padding-top: 25px;
+  padding-bottom: 20px;
   max-width: 280px;
 }
 #result{
@@ -62,6 +87,7 @@ input{
 }
 #display{
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 button:active{
   opacity: 90%;

@@ -22,3 +22,21 @@ array.forEach(button => {
     }
   })
 })
+function changeTheme() {
+  const className = 'dark';
+  if (document.body.classList.contains(className)){
+    document.body.classList.remove(className);
+    localStorage.removeItem('class');
+  }else {
+    document.body.classList.add(className);
+    localStorage.setItem('class', className);
+  }
+}
+function applyTheme() {
+  const saveClass = localStorage.getItem('class');
+  if (saveClass) {
+    document.body.classList.add(saveClass)
+  }
+}
+
+applyTheme();

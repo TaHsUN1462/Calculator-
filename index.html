@@ -3,43 +3,42 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title></title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   </head>
-  <body class="">
+  <body>
     <a href="https://tahsun1462.github.io/HOME/"><button class="home"><ion-icon name="home"></ion-icon></button></a><br>
-    <button class="changer" onclick="changeTheme() "></button><br>
-    <div class="main">
     <div class="container">
-      <div class="inputs">
-      <input id="display" placeholder="0" readonly=""><br>
-      <input id="result" placeholder="" readonly=""><br>
+      <button class="themeChanger" onclick="add()"><ion-icon name="moon-sharp"></ion-icon><ion-icon name="sunny-sharp"></ion-icon></button>
+      <div class="input">
+        <input id="display" readonly="">
+        <input id="result" readonly="">
       </div>
-      <div class="buttons">
-      <button class="operatorButton">AC</button>
-      <button class="operatorButton">DEL</button>
-      <button class="operatorButton">.</button>
-      <button class="operatorButton">/</button><br>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="operatorButton">*</button><br>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="operatorButton">-</button><br>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="operatorButton">+</button><br>
-      <button>0</button>
-      <button>00</button>
-      <button class="equalButton">=</button>
+      <div class="button">
+        <button onclick="clearDisplay()" class="operatorButton">C</button>
+        <button onclick="addNum('(')" class="operatorButton">(</button>
+        <button onclick="addNum(')')" class="operatorButton">)</button>
+        <button onclick="addNum('/')" class="operatorButton">÷</button>
+        <button onclick="addNum('7')">7</button>
+        <button onclick="addNum('8')">8</button>
+        <button onclick="addNum('9')">9</button>
+        <button onclick="addNum('*')" class="operatorButton">×</button>
+        <button onclick="addNum('4')">4</button>
+        <button onclick="addNum('5')">5</button>
+        <button onclick="addNum('6')">6</button>
+        <button onclick="addNum('-')" class="operatorButton">-</button>
+        <button onclick="addNum('1')">1</button>
+        <button onclick="addNum('2')">2</button>
+        <button onclick="addNum('3')">3</button>
+        <button onclick="addNum('+')" class="operatorButton">+</button>
+        <button onclick="addNum('0')">0</button>
+        <button onclick="addNum('.')">.</button>
+        <button onclick="del()" class="Del"><ion-icon name="backspace-outline"></ion-icon></button>
+        <button onclick="calculate()" class="equalButton">=</button>
       </div>
     </div>
-    </div>
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

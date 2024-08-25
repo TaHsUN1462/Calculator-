@@ -1,42 +1,53 @@
-let display = document.getElementById('display');
-let result = document.getElementById('result');
-let buttons = document.querySelectorAll("button");
+let display = document.getElementById('display')
+let result = document.getElementById('result')
 let string = "";
-let array = Array.from(buttons);
-array.forEach(button => {
-  button.addEventListener("click",(e) =>{
-    if (e.target.innerHTML == '=') {
-      string = eval(string);
-      display.value = "";
-      result.value = string;
-    }else if(e.target.innerHTML == 'AC'){
-      string = "";
-      result.value = string;
-      display.value = string;
-    }else if(e. target.innerHTML == 'DEL'){
-      string = string.substring(0, string.length-1);
-      display.value = string;
-    }else{
-      string += e.target.innerHTML;
-      display.value = string;
-    }
-  })
-})
-function changeTheme() {
-  const className = 'dark';
-  if (document.body.classList.contains(className)){
-    document.body.classList.remove(className);
-    localStorage.removeItem('class');
+// Adding number
+function addNum(input){
+  string += input;
+  display.value = string;
+}
+// Deleting the number from last
+function del() {
+  string = display.value.substring(0, display.value.length - 1);
+  display.value = string;
+}
+// Clearing display
+function clearDisplay() {
+  string = '';
+  display.value = string;
+  result.value = string;
+}
+// Calculate
+function calculate() {
+  if (display.value == ""){
+    result.value = "Error"
   }else {
-    document.body.classList.add(className);
-    localStorage.setItem('class', className);
+    try {
+    string = eval(display.value);
+    result.value = string;
+  } catch (e) {
+    result.value = 'Error';
+  }
   }
 }
-function applyTheme() {
-  const saveClass = localStorage.getItem('class');
-  if (saveClass) {
-    document.body.classList.add(saveClass)
+// Change theme
+function add(){
+  const classValue = 'dark';
+  if(document.body.classList.contains(classValue)) {
+    document.body.classList.remove(classValue);
+    localStorage.removeItem('bodyClass');
+  } else {
+    document.body.classList.add(classValue);
+    localStorage.setItem('bodyClass', classValue);
   }
 }
 
-applyTheme();
+function applySavedClass(){
+  const className = localStorage.getItem('bodyClass');
+  if (className){
+    document.body.classList.add(className);
+  }
+}
+
+
+applySavedClass();

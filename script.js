@@ -20,13 +20,13 @@ function clearDisplay() {
 // Calculate
 function calculate() {
   if (display.value == ""){
-    result.value = "Error"
+    result.value = "fyj msL¨v"
   }else {
     try {
     string = eval(display.value);
     result.value = string;
   } catch (e) {
-    result.value = 'Error';
+    result.value = 'fyj msL¨v';
   }
   }
 }

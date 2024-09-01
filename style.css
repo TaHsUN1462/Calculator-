@@ -1,6 +1,12 @@
 @font-face {
   font-family: 'My';
-  src: url('Myfont-Regular.ttf');
+  src: url('SUTOM___.TTF');
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+@font-face {
+  font-family: 'MyS';
+  src: url('SolaimanLipi.ttf');
   font-weight: 400;
   font-size: 1.5rem;
 }
@@ -65,10 +71,18 @@ button{
   font-size: 1.5rem;
   transition: 0.2s ;
   border: none;
+  font-family: 'MyS';
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--btn-col);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1) inset,
              -2px -2px 5px rgba(0,0,0,0.1) inset;
+}
+button:hover 
+{
+  scale: 1.05;
 }
 .container{
   display: flex;
@@ -95,6 +109,9 @@ input{
   background: var(--input);
   padding: 10px;
   font-family: 'My';
+  line-height: 6;
+  text-wrap: wrap;
+  text-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 #display {
   border: solid 2px var(--input-col);
